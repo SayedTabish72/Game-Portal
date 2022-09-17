@@ -3,7 +3,7 @@ import React from "react";
 import videoBG from "./Assest/videoplayback.mp4";
 import tamplate from "./Assest/Blue and Red 72x36 Landscape Campaign Banner.png";
 import tamplate2 from "./Assest/imge2.png";
-import { FooterContainer } from "./HomePage/containers/footer";
+// import { FooterContainer } from "./HomePage/containers/footer";
 
 const Main = () => {
   return (
@@ -19,6 +19,8 @@ const Main = () => {
           An indian digital online games and entertainment site.<br></br> We
           develop, publish and distribute multiplayer games.
         </p>
+
+        
       </div>
 
       <div className="aboutsection">
@@ -35,10 +37,10 @@ const Main = () => {
           <div className="sitecontent"></div>
         </div>
 
-        {/* for footer */}
-        <>
-          <FooterContainer />
-        </>
+          {/* for footer
+          <>
+            <FooterContainer />
+          </> */}
       </div>
     </div>
   );
