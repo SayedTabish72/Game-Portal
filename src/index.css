@@ -1,7 +1,9 @@
-* {
+body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #F1F2F3;
+
 }
 
 .main {
@@ -38,3 +40,19 @@ video {
   /* background-color: #000000cc; */
 }
 
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #121212;
+
+}
+
+h2{
+  position: relative;
+  font-size: x-large;
+  top: 100%;
+  display: flex;
+  color: aliceblue;
+  align-items: center;
+}
