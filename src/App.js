@@ -1,48 +1,144 @@
 // import './App.css';
-import React from "react";
-import videoBG from "./Assest/videoplayback.mp4";
-import tamplate from "./Assest/Blue and Red 72x36 Landscape Campaign Banner.png";
-import tamplate2 from "./Assest/imge2.png";
+// import ReactDOM  from "react-dom";
 // import { FooterContainer } from "./HomePage/containers/footer";
+// import videoBG from './Assest/videoplayback.webm';
+import React from "react";
+// import app from './App';
+// import { Route, Router, Switch, Link } from "react-router-dom";
+// import { BrowserRouter } from "react-router-dom";
+import cardimg from "./Assest/5eKX.gif";
+import cardimg2 from "./Assest/02f73b4809ae455cbda8ef285c7a46f4.gif";
+import cardimg3 from "./Assest/68747470733a2f2f696d616765732e73717561726573706163652d63646e2e636f6d2f636f6e74656e742f76312f3537363966633430316236333162616231616464623261622f313534313538303631313632342d5445363451474b524a47385.gif";
+import cardimg4 from "./Assest/coding.gif";
+import slid1 from "./Assest/slide1.png";
+import slid2 from "./Assest/slide2.png";
+import slid3 from "./Assest/slide3.png";
+import slid4 from "./Assest/slide4.png";
+import Carousel from "react-bootstrap/Carousel";
+import Button from "react-bootstrap/Button";
+import Nav from "react-bootstrap/Nav";
+import Card from "react-bootstrap/Card";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+// import Learn from "./Pages/Learn";
 
 const Main = () => {
   return (
     // Creating view-point for landing pape
     <div className="main">
       <div className="overlay"></div>
-      <video src={videoBG} autoPlay loop muted />
+
+      <Nav variant="tabs" defaultActiveKey="/home">
+        <Nav.Item>
+          <Nav.Link href="/home">Active</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link href="./Pages/About.js">About</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link href="./Pages/Learn.js">Learn</Nav.Link>
+        </Nav.Item>
+      </Nav>
+
       <div className="content">
-        <h1>
-          LET THE <br></br>GAME BEGIN
-        </h1>
-        <p>
-          An indian digital online games and entertainment site.<br></br> We
-          develop, publish and distribute multiplayer games.
-        </p>
+        <Carousel>
+          <Carousel.Item interval={2250}>
+            <img src={slid1} alt="First slide" />
+          </Carousel.Item>
+          <Carousel.Item interval={2500}>
+            <img src={slid2} alt="Second slide" />
+          </Carousel.Item>
+          <Carousel.Item interval={2750}>
+            <img src={slid3} alt="Third slide" />
+          </Carousel.Item>
+          <Carousel.Item interval={3000}>
+            <img src={slid4} alt="Fourth slide" />
+          </Carousel.Item>
+        </Carousel>
 
+        <div className="getstarted">
+          <div className="mb-2">
+            <Button href="#" size="lg">
+              Start learning
+            </Button>{" "}
+          </div>
+        </div>
+
+        {/* content of secend section of Pages */}
+
+        </div>
+
+
+        <div className="secend-sec">
+          {/* <img src={tamplate} /> */}
+
+      <Container>
+      <Row>
+        <Col>
+        <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={cardimg} />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+    </Col>
         
-      </div>
 
-      <div className="aboutsection">
-        <img src={tamplate} />
-        <div className="sitecontent">
-          <h2>
-            We're Developing The Site Which alow's the user <br></br>To play
-            there fav game online without Dyarownloading{" "}
-          </h2>
+        <Col>
+        <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={cardimg2} />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+    </Col>
+        
+        
+        <Col>
+        <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={cardimg3} />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+    </Col>
+
+    <Col>
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={cardimg4} />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go Somewhere</Button>
+      </Card.Body>
+    </Card>
+    </Col>
+      </Row>
+    </Container>
         </div>
 
-        <div className="aboutsection2">
-          <img src={tamplate2} />
-          <div className="sitecontent"></div>
-        </div>
 
-          {/* for footer
-          <>
-            <FooterContainer />
-          </> */}
       </div>
-    </div>
   );
 };
 
